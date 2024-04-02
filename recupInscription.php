@@ -1,11 +1,19 @@
 <?php
-echo 'RecupInscription';
+echo 'Inscription fini, vos information : ';
 $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_STRING);
 $commentaire = filter_input(INPUT_POST, 'commentaire', FILTER_SANITIZE_STRING);
 
-var_dump($_POST);
+#var_dump($_POST);
+echo '</br> Votre nom : ';
+echo $nom;
+echo '</br> Votre email : ';
+echo $email;
+echo '</br> Votre age : ';
+echo $age;
+echo '</br> Votre commentaire : ';
+echo $commentaire;
 
 if (empty($nom)) {
     echo 'Veuillez saisir un nom' . '</br>';
@@ -43,3 +51,4 @@ if (empty($age)) {
 if (empty($commentaire)) {
     echo 'Veuillez saisir un commentaire' . '</br>';
 }
+
